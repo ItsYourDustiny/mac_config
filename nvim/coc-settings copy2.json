@@ -1,0 +1,9 @@
+{
+  "eslint.filetypes": ["typescript", "javascript"],
+  "prettier.run": "onSave",
+  "prettier.autoFixOnSave": true,
+  "prettier.eslintIntegration": true,
+  "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "prettier.formatterPriority": 10,
+  "eslint.quiet": "true"
+}

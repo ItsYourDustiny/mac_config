@@ -1,0 +1,22 @@
+layout {
+
+    tab name="neovim" focus=true {
+        pane borderless=true
+        floating_panes {
+            pane {
+                name=""
+                command="app"
+                size="80%"
+                borderless true
+            }
+        }
+    }
+
+    tab name="terminal" {
+        pane split_direction="vertical" {
+            pane {name="frontend" size="50%" borderless true}
+            pane {name="backend" size="50%" borderless true}
+        }
+    }
+    
+}

@@ -1,0 +1,39 @@
+@REM # set mouse interaction modifier key (default: fn)
+@REM yabai -m config mouse_modifier shift+ctrl+alt+cmd
+
+@REM # default layout (can be bsp, stack or float)
+@REM yabai -m config layout bsp
+
+@REM # new window spawns to the right if vertical split, or bottom if horizontal split
+@REM yabai -m config window_placement second_child
+
+@REM # padding set to 12px
+@REM yabai -m config top_padding 8
+@REM yabai -m config bottom_padding 8
+@REM yabai -m config left_padding 8
+@REM yabai -m config right_padding 8
+@REM yabai -m config window_gap 8
+
+@REM # -- mouse settings --
+
+@REM # center mouse on window with focus
+
+@REM # modifier for clicking and dragging with mouse
+@REM yabai -m config mouse_modifier cmd
+@REM # set modifier + left-click drag to move window
+@REM yabai -m config mouse_action1 move
+@REM # set modifier + right-click drag to resize window
+@REM yabai -m config mouse_action2 resize
+
+@REM # when window is dropped in center of another window, swap them (on edges it will split it)
+@REM yabai -m mouse_drop_action swap
+
+
+@REM # disable specific apps
+@REM yabai -m rule --add app="^System Settings$" manage=off
+@REM yabai -m rule --add app="^Calculator$" manage=off
+@REM yabai -m rule --add app="^Karabiner-Elements$" manage=off
+@REM yabai -m rule --add app="^QuickTime Player$" manage=off
+@REM yabai -m rule --add app="^Zoom$" manage=off
+@REM yabai -m rule --add app="^Messages$" manage=off
+@REM yabai -m rule --add app="^Finder$" manage=off

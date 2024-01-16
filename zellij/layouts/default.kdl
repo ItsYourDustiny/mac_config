@@ -1,0 +1,29 @@
+layout {
+    cwd "~/Dev/GitHub/app-workflow"
+    tab name="Editor" focus=true {
+        pane name="Neovim"
+        floating_panes {
+            pane {
+                name " "
+                x "5%"
+                y "5%"
+                height "90%"
+                width "90%"
+                borderless true
+            }
+        }
+    }
+
+    tab name="Terminal" {
+        pane split_direction="vertical" {
+            pane {
+                    name "Back End"
+                    size "50%" 
+            }
+            pane {
+                    name "Front End" 
+                    size "50%"
+            } 
+        }
+    }
+}

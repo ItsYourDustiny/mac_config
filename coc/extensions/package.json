@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "coc-solargraph": ">=1.2.4",
+    "coc-prettier": ">=9.3.2",
+    "coc-eslint": ">=1.6.0",
+    "coc-tsserver": ">=2.1.4",
+    "coc-diagnostic": ">=0.24.0"
+  }
+}
