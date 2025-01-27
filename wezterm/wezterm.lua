@@ -11,8 +11,8 @@ if wezterm.config_builder then
 end
 
 -- color scheme and font
-config.color_scheme = "nord"
-config.font = wezterm.font("Firamono Nerd Font")
+config.color_scheme = 'Gruvbox Material (Gogh)'
+-- config.font = wezterm.font("Firamono Nerd Font")
 
 -- dont adjust window size
 config.adjust_window_size_when_changing_font_size = false

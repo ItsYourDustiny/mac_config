@@ -85,13 +85,13 @@ keymap.set("v", "K", ":m '<-2<CR>gv=gv") -- move line down(v)
 
 -- git
 --diffview toggle
-keymap.set("n", "<leader>gd", function()
-  if next(require('diffview.lib').views) == nil then
-    vim.cmd('DiffviewOpen')
-  else
-    vim.cmd('DiffviewClose')
-  end
-end)
+-- keymap.set("n", "<leader>gd", function()
+--   if next(require('diffview.lib').views) == nil then
+--     vim.cmd('DiffviewOpen')
+--   else
+--     vim.cmd('DiffviewClose')
+--   end
+-- end)
 -- go to github
 keymap.set({"n", "v"}, "<leader>gg", ":GBrowse<CR>")
 -- git status toggle
@@ -121,3 +121,26 @@ vim.keymap.set("n", "<leader>gs", toggleFugitiveGit, opts)
 -- binding.pry
 keymap.set("n", "<leader>bp", "obinding.pry<Esc> <BAR> :w<CR>")
 keymap.set("n", "<leader>rb", ":g/binding.pry/d<CR> <BAR> :w<CR>")
+
+-- quickfix list
+-- toggle quickfix
+keymap.set("n", "<leader>qf", function()
+  local qf_exists = false
+  for _, win in pairs(vim.fn.getwininfo()) do
+    if win["quickfix"] == 1 then
+      qf_exists = true
+    end
+  end
+  if qf_exists == true then
+    vim.cmd "cclose"
+    return
+  end
+  if not vim.tbl_isempty(vim.fn.getqflist()) then
+    vim.cmd "copen"
+  end
+end)
+-- close quickfix when something is clicked
+vim.api.nvim_create_autocmd(
+  "FileType", {
+  pattern={"qf"},
+  command=[[nnoremap <buffer> <CR> <CR>:cclose<CR>]]})

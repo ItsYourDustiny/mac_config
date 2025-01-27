@@ -1,7 +1,16 @@
 layout {
     cwd "~/Dev/GitHub/app-workflow"
     tab name="Editor" focus=true {
-        pane name="Neovim"
+        pane split_direction="vertical" {
+            pane {
+                    name "Terminal"
+                    size "20%" 
+            }
+            pane {
+                    name "Neovim" 
+                    size "80%"
+            } 
+        }
         floating_panes {
             pane {
                 name " "
@@ -14,18 +23,16 @@ layout {
         }
     }
 
-    tab name="Preview" {
-        pane name="Preview"
-    }
-
     tab name="Terminal" {
         pane split_direction="vertical" {
             pane {
-                    name "Front End"
+                    name "Back End"
+                    size "50%" 
             }
             pane {
-                    name "Back End"
-            }
+                    name "Front End" 
+                    size "50%"
+            } 
         }
     }
 }

@@ -13,7 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({{import = "dustin.plugins"}}, {
   install = {
-    colorscheme = { "nord" },
+    colorscheme = { "gruvbox-material" },
   },
   checker = {
     enabled = true,
